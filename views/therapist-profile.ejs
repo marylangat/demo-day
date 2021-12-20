@@ -1,0 +1,112 @@
+<%-include("layout/header") %>
+
+      <div class="container-fluid">
+      <div class="page-header text-center">
+          <h1><%=user.firstName %></h1>
+          <a href="/feed" class="btn btn-default btn-sm">Feed</a>
+          <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+      </div>
+
+      <center>
+
+      <!-- <div class="card h-100 shadow">
+        <div class="uploads row row-cols-1 row-cols-md-3 g-4">-->
+          <form action= "/upload" method="post" enctype="multipart/form-data">
+            <div class="row">
+              <div class="row gram-card-content">
+                <div class="gram-card-image">
+                  <center>
+                     <div class="upload-btn-wrapper">
+                       <input class="form-control-file" type="file" name="file-to-upload">
+
+                    </div>
+                    <div id="video-priview">  </div>
+                    <img src="" id="blah" class="img-responsive">
+                  </center>
+                </div>
+                  <!-- <p><a class="gram-card-content-user" href="/u/<%= user %>"><%= user.local.email %></a><br> -->
+
+                      <div class="input-field">
+                          <input type="text" id="title" class="form-control" name="title">
+                              <label for="title">Title</label>
+                        </div>
+
+                          <br>
+
+
+
+      </div>
+          <div class="input-field md-form amber-textarea active-amber-textarea">
+              <i class="fas fa-angle-double-right prefix">Do you have any Relationship Advice today?:</i>
+              <textarea id="body" name="body" class="md-textarea form-control" ></textarea>
+
+          </div>
+      </div>
+      <div class=" ">
+          <input type="submit" value="Save" class="class="btn btn-default btn-sm"">
+
+      </div>
+  </div>
+
+  </form>
+
+  <!-- </div>
+
+      </div> -->
+
+     <section class="container">
+        <ul class="messages list-group">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="list-group-item message clickedPost">
+
+
+            <h4 class="mb-1"><% if(posts[i].userType == "expert" ) { %><span> Expert </span><% } %><%= posts[i].title %></h4>
+
+						<p class="mb-1"><%= posts[i].body %></p>
+            <img class="img" style="width:100%" src="data:image/png;base64,<%=posts[i].img.toString('base64') %>" alt="">
+            <% for (let i = 0; i < comments; ++i) {%>
+                <% if (comments[i].postId === (posts._id)) { %>
+                  <div class="comments">
+                      <p class="commentAuthor"><%= comments[i].commentBy %> </p>
+                      <p class="commentContent"><%= comments[i].comment %> </p>
+                    </div>
+
+                <% } %>
+                    <% } %>
+
+
+                    <form action="/comment/<%= posts[i]._id %>" method="POST">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1" style="font-family: 'Abril Fatface', cursive">Post Comment</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Fresh Shoe!"
+                          name="comment" />
+                      </div>
+                      <input class="btn btn-primary" type="submit" value="Submit" />
+                    </form>
+
+
+
+          </li>
+
+        <% } %>
+
+        </ul>
+
+
+        </section>
+
+
+
+
+
+
+        <!-- <div class="container pt-5"> -->
+
+            <!-- </div> -->
+
+          <!-- </div> -->
+
+
+</div>
+</div>
+<%-include("layout/footer") %>

@@ -1,0 +1,42 @@
+
+
+<section class="container">
+  <ul class="messages list-group">
+    <% posts.reverse().forEach(post =>{ %>
+
+    <li class="list-group-item message">
+      <p class="mb-1">
+        <% if(post.UserType === "expert") { %><span> Expert </span><% } %><%=
+        post.postedBy %>
+      </p>
+      <h4 class="mb-1"><%= post.title %></h4>
+      <img class="img" style="width: 100%" src="data:image/png;base64,<%=post.img.toString('base64') %>" alt="" />
+      <p class="mb-1"><%= post.body %></p>
+      
+      <h3 style="margin-bottom: 2%; font-family: 'Abril Fatface', cursive;">
+        recent comments
+      </h3>
+
+      <ul class="list-group">
+        <% for (let i = 0; i < comments.length; ++i) {%> <% if
+        (comments[i].postId.equals(post._id)) { %>
+          <li class="list-group-item"><span style="font-size: 12px; color: rgb(141, 58, 58); margin-right: 8px; "><%=comments[i].commentBy%>:</span><%=comments[i].comment%></li>
+
+        <% } %> <% } %>
+      </ul>
+
+      <form action="/comment/<%= post._id %>" method="POST">
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1" style="font-family: 'Abril Fatface', cursive">Post Comment</label> -->
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Comment Here!"
+            name="comment" />
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" />
+      </form>
+    </li>
+
+    <% }) %>
+  </ul>
+
+  <a href="#" onclick="history.go(-1)">Go Back</a>
+</section>

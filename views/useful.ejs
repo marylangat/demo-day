@@ -1,0 +1,493 @@
+<%- include('layout/header') %>
+<%- include('layout/footer') %>
+
+<% for(let i = 0; i < posts.length; i++) {%>
+  <div class="entry-image mb-3">
+    <a href="" data-lightbox="image" style = "background-image: url(data:image/png;base64,<%=posts[i].img.toString('base64')%>);"></a>
+  </div>
+    <div>
+      <h3><%= posts[i].title %></h3>
+      <h4><%= posts[i].body %></h4>
+      <h4><%= posts[i].status %></h4>
+      <p><%= posts[i].postedBy %></p>
+
+      <span><%=posts[i].createdAt%></span>
+      <div class=" bg-transparent text-right"><a class="btn btn-light text-dark">open</a></div>
+
+    </div>
+
+  <%} %>
+
+
+<div class="card grey lighten-3 chat-room">
+  <div class="card-body">
+
+    <!-- Grid row -->
+    <div class="row px-lg-2 px-2">
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-xl-4 px-0">
+
+        <h6 class="font-weight-bold mb-3 text-center text-lg-left">Member</h6>
+        <div class="white z-depth-1 px-3 pt-3 pb-0">
+          <ul class="list-unstyled friend-list">
+            <li class="active grey lighten-3 p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>John Doe</strong>
+                  <p class="last-message text-muted">Hello, Are you there?</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">Just now</p>
+                  <span class="badge badge-danger float-right">1</span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Danny Smith</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">5 min ago</p>
+                  <span class="text-muted float-right"><i class="fas fa-mail-reply" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Alex Steward</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">Yesterday</p>
+                  <span class="text-muted float-right"><i class="fas fa-mail-reply" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Ashley Olsen</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">Yesterday</p>
+                  <span class="text-muted float-right"><i class="fas fa-mail-reply" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-4.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Kate Moss</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">Yesterday</p>
+                  <span class="text-muted float-right"><i class="fas fa-mail-reply" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Lara Croft</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">Yesterday</p>
+                  <span class="text-muted float-right"><i class="fas fa-mail-reply" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+            <li class="p-2">
+              <a href="#" class="d-flex justify-content-between">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="avatar" class="avatar rounded-circle d-flex align-self-center mr-2 z-depth-1">
+                <div class="text-small">
+                  <strong>Brad Pitt</strong>
+                  <p class="last-message text-muted">Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="chat-footer">
+                  <p class="text-smaller text-muted mb-0">5 min ago</p>
+                  <span class="text-muted float-right"><i class="fas fa-check" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-xl-8 pl-md-3 px-lg-auto px-0">
+
+        <div class="chat-message">
+
+          <ul class="list-unstyled chat">
+            <li class="d-flex justify-content-between mb-4">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="avatar" class="avatar rounded-circle mr-2 ml-lg-3 ml-0 z-depth-1">
+              <div class="chat-body white p-3 ml-2 z-depth-1">
+                <div class="header">
+                  <strong class="primary-font">Brad Pitt</strong>
+                  <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins ago</small>
+                </div>
+                <hr class="w-100">
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+            <li class="d-flex justify-content-between mb-4">
+              <div class="chat-body white p-3 z-depth-1">
+                <div class="header">
+                  <strong class="primary-font">Lara Croft</strong>
+                  <small class="pull-right text-muted"><i class="far fa-clock"></i> 13 mins ago</small>
+                </div>
+                <hr class="w-100">
+                <p class="mb-0">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                  laudantium.
+                </p>
+              </div>
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="avatar" class="avatar rounded-circle mr-0 ml-3 z-depth-1">
+            </li>
+            <li class="d-flex justify-content-between mb-4 pb-3">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="avatar" class="avatar rounded-circle mr-2 ml-lg-3 ml-0 z-depth-1">
+              <div class="chat-body white p-3 ml-2 z-depth-1">
+                <div class="header">
+                  <strong class="primary-font">Brad Pitt</strong>
+                  <small class="pull-right text-muted"><i class="far fa-clock"></i> 12 mins ago</small>
+                </div>
+                <hr class="w-100">
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
+                </p>
+              </div>
+            </li>
+            <li class="white">
+              <div class="form-group basic-textarea">
+                <textarea class="form-control pl-2 my-0" id="exampleFormControlTextarea2" rows="3" placeholder="Type your message here..."></textarea>
+              </div>
+            </li>
+            <button type="button" class="btn btn-info btn-rounded btn-sm waves-effect waves-light float-right">Send</button>
+          </ul>
+
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+
+
+
+
+
+<!doctype html>
+<html>
+<head>
+    <title>LOVE BUDDY</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="/css/profile.css">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+         <div id="content" class="content content-full-width">
+            <!-- begin profile -->
+            <div class="profile">
+               <div class="profile-header">
+                  <!-- BEGIN profile-header-cover -->
+                  <div class="profile-header-cover"></div>
+                  <!-- END profile-header-cover -->
+                  <!-- BEGIN profile-header-content -->
+                  <div class="profile-header-content">
+                     <!-- BEGIN profile-header-img -->
+                     <div class="profile-header-img">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                     </div>
+                     <!-- END profile-header-img -->
+                     <!-- BEGIN profile-header-info -->
+                     <div class="profile-header-info">
+                        <h4 class="m-t-10 m-b-5">Sean Ngu</h4>
+                        <p class="m-b-10">UXUI + Frontend Developer</p>
+                        <a href="#" class="btn btn-sm btn-info mb-2">Edit Profile</a>
+                     </div>
+                     <!-- END profile-header-info -->
+                  </div>
+                  <!-- END profile-header-content -->
+                  <!-- BEGIN profile-header-tab -->
+                  <ul class="profile-header-tab nav nav-tabs">
+                     <li class="nav-item"><a href="#profile-post" class="nav-link active show" data-toggle="tab">POSTS</a></li>
+                     <li class="nav-item"><a href="#profile-about" class="nav-link" data-toggle="tab">ABOUT</a></li>
+                     <li class="nav-item"><a href="#profile-photos" class="nav-link" data-toggle="tab">FEED</a></li>
+                     <li class="nav-item"><a href="#profile-videos" class="nav-link" data-toggle="tab"></a>EXPERTS NEAR ME</li>
+                     <li class="nav-item"><a href="#profile-friends" class="nav-link" data-toggle="tab">Whats Next?</a></li>
+                  </ul>
+                  <!-- END profile-header-tab -->
+               </div>
+            </div>
+            <!-- end profile -->
+            <!-- begin profile-content -->
+            <div class="profile-content">
+               <!-- begin tab-content -->
+               <div class="tab-content p-0">
+                  <!-- begin #profile-post tab -->
+                  <div class="tab-pane fade active show" id="profile-post">
+                     <!-- begin timeline -->
+                     <ul class="timeline">
+                        <li>
+                           <!-- begin timeline-time -->
+                           <div class="timeline-time">
+                              <!-- <span class="date">today</span> -->
+                              <span class="time"><%= posts[i].createdAt %></span>
+                           </div>
+                           <!-- end timeline-time -->
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                 <span class="username"><a href="javascript:;"><%=posts[i].postedBy%></a> <small></small></span>
+                                 <!-- <span class="pull-right text-muted">18 Views</span> -->
+                              </div>
+                              <div class="timeline-content">
+                                 <p><%= posts[i].body%></p>
+                              </div>
+                              <div class="timeline-likes">
+                                 <div class="stats-right">
+                                    <span class="stats-text">259 Shares</span>
+                                    <span class="stats-text">21 Comments</span>
+                                 </div>
+                                 <div class="stats">
+                                    <span class="fa-stack fa-fw stats-icon">
+                                    <i class="fa fa-circle fa-stack-2x text-danger"></i>
+                                    <i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
+                                    </span>
+                                    <span class="fa-stack fa-fw stats-icon">
+                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                    <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <span class="stats-total">4.3k</span>
+                                 </div>
+                              </div>
+                              <div class="timeline-footer">
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                              </div>
+                              <div class="timeline-comment-box">
+                                 <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div>
+                                 <div class="input">
+                                    <form action="">
+                                       <div class="input-group">
+                                          <input type="text" class="form-control rounded-corner" placeholder="Write a comment...">
+                                          <span class="input-group-btn p-l-10">
+                                          <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+                                          </span>
+                                       </div>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- end timeline-body -->
+                        </li>
+                        <li>
+
+                          <form action= "/upload" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                              <div class="row gram-card-content">
+                                <div class="gram-card-image">
+                                  <center>
+                                     <div class="upload-btn-wrapper">
+                                       <input class="form-control-file" type="file" name="file-to-upload">
+
+                                    </div>
+                                    <div id="video-priview">  </div>
+                                    <img src="" id="blah" class="img-responsive">
+                                  </center>
+                                </div>
+                                  <!-- <p><a class="gram-card-content-user" href="/u/<%= user %>"><%= user.local.email %></a><br> -->
+
+                                      <div class="input-field">
+                                          <input type="text" id="title" class="form-control" name="title">
+                                              <label for="title">Title</label>
+                                        </div>
+
+                                          <br>
+
+                                            <div class="">
+                                      <div class="input-field">
+                                        <select id="status" name="status">
+                                              <option value="public" selected>Public</option>
+                                              <option value="private">Private</option>
+                                        </select>
+                                      <label for="status">Status</label>
+                                      </div>
+
+                      </div>
+                          <div class="input-field md-form amber-textarea active-amber-textarea">
+                              <i class="fas fa-angle-double-right prefix">Ask an Expert</i>
+                              <textarea id="body" name="body" class="md-textarea form-control" ></textarea>
+
+                          </div>
+                      </div>
+                      <div class=" ">
+                          <input type="submit" value="Save" class="btnfooter-action-icons likes btn btn-link non-hoverable">
+                          <a href="/client-profile" class="btn orange">Cancel</a>
+                      </div>
+                  </div>
+
+                  </form>
+
+
+                          <% for(let i = 0; i < posts.length; i++) {%>
+                           <!-- begin timeline-time -->
+                           <div class="timeline-time">
+                              <span class="date">yesterday</span>
+                              <span class="time">20:17</span>
+                           </div>
+                           <!-- end timeline-time -->
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                 <span class="username">Sean Ngu</span>
+                                 <span class="pull-right text-muted">82 Views</span>
+                              </div>
+                              <div class="timeline-content">
+                                 <p>Location: United States</p>
+                              </div>
+                              <div class="timeline-footer">
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                              </div>
+                           </div>
+                           <%} %>
+                           <!-- end timeline-body -->
+                        </li>
+                        <li>
+                           <!-- begin timeline-time -->
+                           <div class="timeline-time">
+                              <span class="date">24 February 2014</span>
+                              <span class="time">08:17</span>
+                           </div>
+                           <!-- end timeline-time -->
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                 <span class="username">Sean Ngu</span>
+                                 <span class="pull-right text-muted">1,282 Views</span>
+                              </div>
+                              <div class="timeline-content">
+                                 <p class="lead">
+                                    <i class="fa fa-quote-left fa-fw pull-left"></i>
+                                    Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
+                                    <i class="fa fa-quote-right fa-fw pull-right"></i>
+                                 </p>
+                              </div>
+                              <div class="timeline-footer">
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                              </div>
+                           </div>
+                           <!-- end timeline-body -->
+                        </li>
+                        <li>
+                           <!-- begin timeline-time -->
+                           <div class="timeline-time">
+                              <span class="date">10 January 2014</span>
+                              <span class="time">20:43</span>
+                           </div>
+                           <!-- end timeline-time -->
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              <div class="timeline-header">
+                                 <span class="userimage"><img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt=""></span>
+                                 <span class="username">Sean Ngu</span>
+                                 <span class="pull-right text-muted">1,021,282 Views</span>
+                              </div>
+                              <div class="timeline-content">
+                                 <h4 class="template-title">
+                                    <i class="fa fa-map-marker text-danger fa-fw"></i>
+                                    795 Folsom Ave, Suite 600 San Francisco, CA 94107
+                                 </h4>
+                                 <p>In hac habitasse platea dictumst. Pellentesque bibendum id sem nec faucibus. Maecenas molestie, augue vel accumsan rutrum, massa mi rutrum odio, id luctus mauris nibh ut leo.</p>
+                                 <p class="m-t-20">
+                                    <img src="../assets/img/gallery/gallery-5.jpg" alt="">
+                                 </p>
+                              </div>
+                              <div class="timeline-footer">
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-thumbs-up fa-fw fa-lg m-r-3"></i> Like</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-comments fa-fw fa-lg m-r-3"></i> Comment</a>
+                                 <a href="javascript:;" class="m-r-15 text-inverse-lighter"><i class="fa fa-share fa-fw fa-lg m-r-3"></i> Share</a>
+                              </div>
+                           </div>
+                           <!-- end timeline-body -->
+                        </li>
+                        <li>
+                           <!-- begin timeline-icon -->
+                           <div class="timeline-icon">
+                              <a href="javascript:;">&nbsp;</a>
+                           </div>
+                           <!-- end timeline-icon -->
+                           <!-- begin timeline-body -->
+                           <div class="timeline-body">
+                              Loading...
+                           </div>
+                           <!-- begin timeline-body -->
+                        </li>
+                     </ul>
+                     <!-- end timeline -->
+                  </div>
+                  <!-- end #profile-post tab -->
+               </div>
+               <!-- end tab-content -->
+            </div>
+            <!-- end profile-content -->
+         </div>
+      </div>
+   </div>
+</div>

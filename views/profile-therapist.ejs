@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <title>LOVE BUDDY</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Expert Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+
+
+    <h2>Fill Form</h2>
+  <% if (user.local.email) { %>
+
+
+
+
+
+        <form action="/maketherapistAdressaddress" method="POST" id="therapistAdressForm" enctype="multipart/form-data">
+          <div class="row">
+            <div class="row gram-card-content">
+              <div class="gram-card-image">
+                <center>
+                   <div class="upload-btn-wrapper">
+                     <input class="form-control-file" type="file" name="file-to-upload">
+
+                  </div>
+                  <div id="video-priview">  </div>
+                  <img src="" id="blah" class="img-responsive">
+                </center>
+              </div>
+          </div>
+
+          </div>
+
+          
+
+  <div class="form-group" >
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress"  name="address" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Apartment, studio, or floor">
+  </div>
+
+    <div class="form-group ">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" name="city" id="inputCity">
+    </div>
+    <div class="form-group ">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control" name = "state">
+        <option selected>Choose...</option>
+        <option value="AL">Alabama</option>
+  <option value="AK">Alaska</option>
+  <option value="AZ">Arizona</option>
+  <option value="AR">Arkansas</option>
+  <option value="CA">California</option>
+  <option value="CO">Colorado</option>
+  <option value="CT">Connecticut</option>
+  <option value="DE">Delaware</option>
+  <option value="DC">District Of Columbia</option>
+  <option value="FL">Florida</option>
+  <option value="GA">Georgia</option>
+  <option value="HI">Hawaii</option>
+  <option value="ID">Idaho</option>
+  <option value="IL">Illinois</option>
+  <option value="IN">Indiana</option>
+  <option value="IA">Iowa</option>
+  <option value="KS">Kansas</option>
+  <option value="KY">Kentucky</option>
+  <option value="LA">Louisiana</option>
+  <option value="ME">Maine</option>
+  <option value="MD">Maryland</option>
+  <option value="MA">Massachusetts</option>
+  <option value="MI">Michigan</option>
+  <option value="MN">Minnesota</option>
+  <option value="MS">Mississippi</option>
+  <option value="MO">Missouri</option>
+  <option value="MT">Montana</option>
+  <option value="NE">Nebraska</option>
+  <option value="NV">Nevada</option>
+  <option value="NH">New Hampshire</option>
+  <option value="NJ">New Jersey</option>
+  <option value="NM">New Mexico</option>
+  <option value="NY">New York</option>
+  <option value="NC">North Carolina</option>
+  <option value="ND">North Dakota</option>
+  <option value="OH">Ohio</option>
+  <option value="OK">Oklahoma</option>
+  <option value="OR">Oregon</option>
+  <option value="PA">Pennsylvania</option>
+  <option value="RI">Rhode Island</option>
+  <option value="SC">South Carolina</option>
+  <option value="SD">South Dakota</option>
+  <option value="TN">Tennessee</option>
+  <option value="TX">Texas</option>
+  <option value="UT">Utah</option>
+  <option value="VT">Vermont</option>
+  <option value="VA">Virginia</option>
+  <option value="WA">Washington</option>
+  <option value="WV">West Virginia</option>
+  <option value="WI">Wisconsin</option>
+  <option value="WY">Wyoming</option>
+      </select>
+    </div>
+    <div class="form-group ">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" name="zip" id="inputZip">
+    </div>
+  <!-- </div> -->
+  <!-- <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div> -->
+
+
+  <button type="submit" value="save"class="btn btn-primary button">submit</button>
+</form>
+<% } %>
+
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+<script src="main.js"></script>
+
+</body>
+</html>

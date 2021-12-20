@@ -1,0 +1,51 @@
+<%-include("layout/header") %>
+
+
+<div class="page-header text-center">
+    <h1><%=user.firstName %></h1>
+    <a href="/feed" class="btn btn-default btn-sm" style="color: #709085;">Feed</a>
+    <a href="/client-profile" class="btn btn-default btn-sm"style="color: #709085;">Profile</a>
+    <a href="/logout" class="btn btn-default btn-sm" style="color: #709085;">Logout</a>
+</div>
+
+
+
+      <div id="content" class="p-4 p-md-5 pt-5">
+
+      <form class="" action="/findTherapists" method="post">
+        <input type="text" name="zip" value="" placeholder="Enter your Zip...">
+        <input type="text" name="radius" value="" placeholder="Enter distance...">
+        <button type="submit" name="button">search</button>
+
+        <% console.log(therapists)%>
+
+      </form>
+
+      <% for(let i = 0; i < therapists.length; i++) {%>
+
+
+
+
+
+      <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    <%= therapists[i].name %>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li><img class="img" style="width:100%" src="data:image/png;base64,<%=therapists[i].img.toString('base64') %>" alt="">
+    </li>
+    
+    <li class="list-group-item"><%= therapists[i].address %></li>
+    <li class="list-group-item"><%= therapists[i].city %></li>
+    <li class="list-group-item"><%= therapists[i].zip %></li>
+    <li class="list-group-item"><%= therapists[i].state %></li>
+    <li class="list-group-item"><%= therapists[i].phoneNumber%></li>
+  </ul>
+</div>
+
+
+ <% } %>
+    </div>
+
+    <%-include("layout/footer") %>
+
